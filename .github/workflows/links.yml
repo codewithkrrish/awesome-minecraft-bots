@@ -1,0 +1,25 @@
+name: links
+
+on:
+  push:
+    paths:
+      - "README.md"
+      - "scripts/check_links.py"
+  schedule:
+    - cron: "0 9 * * 1"  # Monday mornings, UTC
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install test deps
+        run: pip install pytest
+      - name: Run tests
+        run: python -m pytest tests/ -q
+      - name: Check links
+        run: python scripts/check_links.py
