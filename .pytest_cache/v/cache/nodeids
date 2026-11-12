@@ -1,0 +1,16 @@
+[
+  "tests/test_check_links.py::test_check_url_403_retried_with_get_then_unreachable",
+  "tests/test_check_links.py::test_check_url_broken_on_404",
+  "tests/test_check_links.py::test_check_url_falls_back_to_get_when_head_is_refused",
+  "tests/test_check_links.py::test_check_url_ok_on_200",
+  "tests/test_check_links.py::test_check_url_unreachable_on_dns_failure",
+  "tests/test_check_links.py::test_extract_links_dedupes_and_keeps_order",
+  "tests/test_check_links.py::test_extract_links_finds_markdown_links",
+  "tests/test_check_links.py::test_extract_links_ignores_non_http",
+  "tests/test_check_links.py::test_extract_links_skips_images_anchors_and_mailto",
+  "tests/test_check_links.py::test_main_broken_link_exits_1",
+  "tests/test_check_links.py::test_main_dry_run_lists_links_and_does_not_fetch",
+  "tests/test_check_links.py::test_main_missing_file_exits_2",
+  "tests/test_check_links.py::test_main_unreachable_is_warning_by_default_but_fails_strict",
+  "tests/test_check_links.py::test_readme_has_no_duplicate_links"
+]
